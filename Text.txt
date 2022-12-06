@@ -13,3 +13,5 @@ users, printers, PCs, shared data, departments and project teams. DC is a server
 requirements and evaluates clients in PC organizations. A domain is a continuous process of filtering clients and 
 PCs collaborating into the same organization.Domain Manager keeps all information integrated and accessible. 
 Domain regulator (DC) is the most powerful authority in Active Directory (AD).
+
+
