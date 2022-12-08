@@ -56,3 +56,7 @@ Advantages:
 With Azure, you can use the basic features of AD such as joining a domain called Azure AD DS, LDAP bind, NTLM and 
 Kerberos authentication, and group policy. Since it is provided as a service by Azure, it is no longer necessary 
 to build an AD or apply modification programs, which reduces operational considerations and work costs.
+
+
+
+This is updated.
