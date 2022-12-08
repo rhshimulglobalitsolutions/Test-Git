@@ -1,0 +1,58 @@
+Migrate from On Premise AD to Azure Active Directory?
+Azure AD is not designed to be the cloud version of AD. It is not a domain controller or a directory in the cloud 
+that will provide the exact same capabilities with AD in a different way. That’s why there is no actual 
+“migration” path from AD to Azure AD. You can synchronize your on-premises (AD or other) to Azure AD but not 
+migrate your computer accounts, group policies, OU etc. 
+Azure AD is an identity and access management solution for hybrid or cloud-only implementations. It can extend 
+the reach of your on-premises identities to any SaaS application hosted in any cloud. It can provide secure remote 
+access, identity management, cloud app discovery, Multi-Factor Authentication, protection of your identities in the 
+cloud, reporting of Sign-ins from possibly infected devices, leaked credentials report, user behavioral analysis 
+are a few additional things that we couldn’t even imagine with the traditional AD on-premises.
+
+Three Ways to Migrate On-Premises AD to the Cloud 
+Find out which cloud migration pattern works best for your company.
+
+Pattern 1: I want to manage the same domain as in-house environment on Azure.
+
+Configuration:
+Build Windows Server AD and Azure AD Connect on Azure
+Sync AD ID and password information with Azure AD through AAD Connect
+
+Advantages:
+Implement existing AD management directly on Azure. It is possible to continue the existing operation policy
+Since the authentication process is completed in Azure, wasteful communication charges can be suppressed and 
+  available without
+
+You can manage the domain of the built virtual machine with AD, and you can use the customizations, functions, 
+and authentication methods used in the internal environment as they are on Azure. Accounts can be synchronized 
+with Azure AD via Azure AD Connect, allowing users to log in to Microsoft 365 or cloud services with their 
+existing accounts, reducing the time and cost of managing multiple accounts. 
+
+Pattern 2: I want to manage Azure using the existing in-house Active Directory.
+
+Configuration:
+Use existing ADDS configured on-premises
+Sync ID information of ADDS with Azure AD via Azure AD Connect
+
+Advantages:
+Existing Active Directory can be used as is
+Azure AD can be used while minimizing changes to the existing environment
+
+Azure AD Connect allows customers to synchronize their internal accounts with Azure AD, allowing them to access 
+both internal and cloud services with a single account. Accounts are automatically synchronized, so there is no 
+operational burden. It can be used as an integrated authentication infrastructure that can be used for various 
+services on the Internet as well as within the company.
+
+
+Pattern 3: I want to manage domains only with Azure functions.
+
+Configuration:
+Use ADDS PaaS service Azure AD DS provided on Azure
+
+Advantages:
+Since Azure provides domain management functions, service quality is guaranteed.
+Because it is not affected by hardware upgrades on Azure, there is no need to consider replacement.
+
+With Azure, you can use the basic features of AD such as joining a domain called Azure AD DS, LDAP bind, NTLM and 
+Kerberos authentication, and group policy. Since it is provided as a service by Azure, it is no longer necessary 
+to build an AD or apply modification programs, which reduces operational considerations and work costs.
