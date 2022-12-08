@@ -1,0 +1,15 @@
+Synchronization from on-premises AD DS to Azure AD using managed domain
+In a hybrid environment, objects and credentials from an on-premises AD DS domain can be synchronized to Azure AD using Azure AD Connect. Once those objects are 
+successfully synchronized to Azure AD, the automatic background sync then makes those objects and credentials like, (user accounts, group memberships, credential 
+hashes, UPN and on-premises security identifier (SID), NTLM, and Kerberos) are available to applications using the managed domain.
+
+Azure AD Connect should only be installed and configured for synchronization with on-premises AD DS environments. 
+Not to synchronize objects back to Azure AD. For example, if a user changes their password using Azure AD self-service password management, the password is updated 
+back in the on-premises AD DS environment.
+
+Synchronization from a multi-forest on-premises environment
+Many organizations have a complex on-premises AD DS environment that includes multiple forests. Azure AD has a much simpler and flat namespace. To enable users to 
+reliably access in different forests. 
+
+The Azure AD Connect synchronization services is a main component of Azure AD Connect. This topic is also called sync engine. 
+Both on-premises and Azure AD are connected to the Azure AD Connect sync engine
