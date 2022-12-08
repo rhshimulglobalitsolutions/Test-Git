@@ -16,4 +16,3 @@ Surrounding the Well-Architected Framework are six supporting elements:
 5. Reference Architectures
 6. Design Principles
 
-Updated
