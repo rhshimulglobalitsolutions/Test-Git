@@ -7,21 +7,3 @@ to be (authentication), usually by checking the user ID and password they enter 
 data they’re allowed to use (authorization). AD is like a tool for translating company resources into files and 
 placing them in hierarchical folders to make it easier to see where they are. 
 
-Domain Controller (DC): AD creates areas　called "domains" that represent relationships between resources. 
-You can think of domains like large folders. Within this domain you can handle information about resources such 
-as users, printers, PCs, shared data, departments and project teams. DC is a server that responds to verification 
-requirements and evaluates clients in PC organizations. A domain is a continuous process of filtering clients and 
-PCs collaborating into the same organization.Domain Manager keeps all information integrated and accessible. 
-Domain regulator (DC) is the most powerful authority in Active Directory (AD).
-
-Domain Tree (Forest): when it comes to large companies, they have subsidiaries and branch offices, and in some 
-cases create separate domains. If you need the parent company's resources, it is inconvenient to create an account 
-and access them again, so you can build a trust relationship between each domain and set a policy that allows 
-access.  This is called a domain tree. IT is also possible to establish a trust relationship with an entirely 
-different domain (domain tree).
-
-Single Sign-on (SSO): In the "domain tree" and "forest", users can access resources in domains with which they 
-have a trust relationship simply by logging in once to the domain to which they belong. Such a mechanism that 
-allows access to various resources with a single login is called single sign-on (SSO).
-However, forest refers to a trust relationship using AD within Windows Server, so the relationship that allows 
-SSO in external cloud services and web services is called federation.

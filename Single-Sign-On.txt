@@ -1,0 +1,5 @@
+Single Sign-on (SSO): In the "domain tree" and "forest", users can access resources in domains with which they 
+have a trust relationship simply by logging in once to the domain to which they belong. Such a mechanism that 
+allows access to various resources with a single login is called single sign-on (SSO).
+However, forest refers to a trust relationship using AD within Windows Server, so the relationship that allows 
+SSO in external cloud services and web services is called federation.

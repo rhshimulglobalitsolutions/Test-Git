@@ -1,0 +1,6 @@
+Domain Tree (Forest): when it comes to large companies, they have subsidiaries and branch offices, and in some 
+cases create separate domains. If you need the parent company's resources, it is inconvenient to create an account 
+and access them again, so you can build a trust relationship between each domain and set a policy that allows 
+access.  This is called a domain tree. IT is also possible to establish a trust relationship with an entirely 
+different domain (domain tree).
+
