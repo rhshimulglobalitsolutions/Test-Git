@@ -5,4 +5,3 @@ migrate your computer accounts, group policies, OU etc. Azure AD is an identity 
 the reach of your on-premises identities to any SaaS application hosted in any cloud. It can provide secure remote access, identity management, cloud app discovery, 
 Multi-Factor Authentication, protection of your identities in the cloud, reporting of Sign-ins from possibly infected devices, leaked credentials report, user 
 behavioral analysis are a few additional things that we couldn’t even imagine with the traditional AD on-premises.
-
