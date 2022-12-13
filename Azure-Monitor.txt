@@ -1,0 +1,31 @@
+Azure Monitoring Solution:
+
+Organizations are going through an era of digital transformation and are embracing various cloud-native 
+technologies to fuel innovation. Developers are critical to this transformation; they need to quickly bring 
+innovation to the market to address customer needs. 
+Applications developed on Azure deliver reliability, scalability, and the ability to handle huge amounts of 
+workloads anywhere around the world. These cloud-native apps take advantage of containers, serverless technology, 
+and micro-services-based architecture with Azure Kubernetes Service, Azure Container Apps, and Azure Functions.
+Such a growing application environment brings new challenges. Business acceleration is far more than just adopting 
+cloud-native technologies, it’s also about agility and scale. We recognize how onerous it can be for developers 
+to configure and monitor the infrastructure and distributed microservices. Once microservices are deployed, you 
+need the ability to effectively detect and troubleshoot issues to ensure that you provide performance and 
+reliability to your customers. Combating these challenges requires a reliable and scalable monitoring solution 
+that seamlessly combines metrics, logs, and dashboards into a single experience.
+
+Monitoring service with Azure new offerings—
+	Azure Monitor managed service for Prometheus (preview) and 
+	Azure Managed Grafana. 
+
+They complement existing Azure Monitor tools to help you monitor each layer of your full cloud-native stack on 
+Kubernetes and quickly troubleshoot issues across microservices and infrastructure. Additionally, you can now set 
+up collection for Prometheus metrics and container logs and view them in Grafana dashboards with a single click!
+The new Azure Monitor managed service for Prometheus (preview) gives you a fully managed cloud-native metrics 
+solution to ingest, alert on, and query your Prometheus metrics, which provide visibility to the health and 
+performance of your infrastructure and applications. Azure monitor container insights increases your visibility 
+with a fully managed cloud-native logs solution for advanced troubleshooting by analyzing container stdout, 
+stderr, and infrastructure logs. You can quickly identify and mitigate latency and reliability issues using 
+distributed traces with Azure Monitor application insights with preview OpenTelemetry-based instrumentation, 
+which is a fully managed application and performance monitoring (APM) solution. which gives you a fully managed 
+service for full-stack troubleshooting dashboards.
+
