@@ -6,16 +6,17 @@ Ex: IT admins, App developers, Microsoft 365, Office 365, Azure, or Dynamics CRM
 
 There are three common ways to use AD-based services in Azure. 
  1.AD DS - AD DS is a central component in many organizations with an on-premises 
-IT environment and provides core user account authentication and computer management features.
+   IT environment and provides core user account authentication and computer management features.
  2.Azure AD - Cloud-based identity and mobile device management that provides
-user account and authentication services for resources such as Microsoft 365, the Azure portal, 
-or SaaS applications. Azure AD can be sync with an on-premises AD DS and provide a single identity to users that 
-works natively in the cloud.
+   user account and authentication services for resources such as Microsoft 365, the Azure portal, 
+   or SaaS applications. Azure AD can be sync with an on-premises AD DS and provide a single identity to users that 
+   works natively in the cloud.
  3.Azure AD DS – Provides managed domain services with a subset of fully
-compatible traditional AD DS features such as domain join, group policy, LDAP, and Kerberos / NTLM authentication.
+   compatible traditional AD DS features such as domain join, group policy, LDAP, and Kerberos / NTLM authentication.
 
 Compare Active Directory to Azure Active Directory: 
  Microsoft introduced AD DS in Windows 2000 to give organizations the ability to manage multiple on-premises 
 infrastructure components and systems using a single identity per user.
 Azure AD takes this approach to the next level by providing organizations with an Identity as a Service (IDaaS) 
 solution for all their apps across cloud and on-premises.
+ 
