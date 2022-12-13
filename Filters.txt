@@ -7,8 +7,7 @@ When using Google Cloud services, you periodically need to modify your DNS setti
 services. You do this by changing various types of DNS records. 
 
 Sender Policy Framework (SPF): 
-SPF is an email authentication standard that helps protect senders and recipients from spam, spoofing, and 
-phishing. 
+SPF is an email authentication standard that helps protect senders and recipients from spam, spoofing, & phishing. 
 
 By adding an SPF record to your Domain Name System (DNS), you can provide a public list of senders that are 
 approved to send email from your domain. Receiving servers can then cross-check that email originated from a server
