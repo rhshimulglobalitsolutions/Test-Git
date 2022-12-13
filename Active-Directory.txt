@@ -7,4 +7,4 @@ to be (authentication), usually by checking the user ID and password they enter 
 data they’re allowed to use (authorization). AD is like a tool for translating company resources into files and 
 placing them in hierarchical folders to make it easier to see where they are. 
 
-Updated
+Updated 
