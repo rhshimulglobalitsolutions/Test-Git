@@ -15,4 +15,4 @@ Surrounding the Well-Architected Framework are six supporting elements:
 4. Partners, Support, and Services Offers
 5. Reference Architectures
 6. Design Principles
-
+ 
