@@ -1,8 +1,10 @@
 Migrate from On Premise AD to Azure Active Directory?
+
 Azure AD is not designed to be the cloud version of AD. It is not a domain controller or a directory in the cloud 
 that will provide the exact same capabilities with AD in a different way. That’s why there is no actual 
 “migration” path from AD to Azure AD. You can synchronize your on-premises (AD or other) to Azure AD but not 
 migrate your computer accounts, group policies, OU etc. 
+
 Azure AD is an identity and access management solution for hybrid or cloud-only implementations. It can extend 
 the reach of your on-premises identities to any SaaS application hosted in any cloud. It can provide secure remote 
 access, identity management, cloud app discovery, Multi-Factor Authentication, protection of your identities in the 
