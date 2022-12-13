@@ -1,4 +1,5 @@
-Domain Controller (DC): AD creates areas　called "domains" that represent relationships between resources. 
+Domain Controller (DC): 
+AD creates areas　called "domains" that represent relationships between resources. 
 You can think of domains like large folders. Within this domain you can handle information about resources such 
 as users, printers, PCs, shared data, departments and project teams. DC is a server that responds to verification 
 requirements and evaluates clients in PC organizations. A domain is a continuous process of filtering clients and 
