@@ -1,4 +1,5 @@
-Synchronization from on-premises AD DS to Azure AD using managed domain
+Synchronization from on-premises AD DS to Azure AD using managed domain:
+
 In a hybrid environment, objects and credentials from an on-premises AD DS domain can be synchronized to Azure AD using Azure AD Connect. Once those objects are 
 successfully synchronized to Azure AD, the automatic background sync then makes those objects and credentials like, (user accounts, group memberships, credential 
 hashes, UPN and on-premises security identifier (SID), NTLM, and Kerberos) are available to applications using the managed domain.
