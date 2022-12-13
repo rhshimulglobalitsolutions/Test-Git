@@ -1,6 +1,6 @@
 The Migration and modernization tool helps in migrating servers to Azure:
 
-Migrate	                        Details
+Migrate	                        Details 
 
 On-premises VMware VMs	        Migrate VMs to Azure using agentless or agent-based migration.For agentless
 				migration, the Migration and modernization tool uses the same appliance that
