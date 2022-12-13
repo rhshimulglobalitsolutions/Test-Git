@@ -1,4 +1,4 @@
-Three Ways to Migrate On-Premises AD to the Cloud 
+Three Ways to Migrate On-Premises AD to the Cloud.
 Find out which cloud migration pattern works best for your company.
 
 Pattern 1: I want to manage the same domain as in-house environment on Azure.
