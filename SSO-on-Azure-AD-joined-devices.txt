@@ -1,0 +1,67 @@
+How SSO to on-premises resources works on Azure AD joined devices:
+It probably comes as no surprise that Azure Active Directory (Azure AD) joined devices provide a single sign-on 
+(SSO) experience to your tenant's cloud apps. If you have on-premises Active Directory Domain Services (AD DS) in 
+your current environment, you can also get the SSO experience on your Azure AD-joined devices to your on-premises 
+AD-dependent resources and applications.
+
+How it works:
+Your users already have an SSO experience with cloud apps in your environment with Azure AD joined devices. If you 
+have Azure AD and on-premises AD in your environment, you can extend the reach of your SSO experience to 
+on-premises line-of-business (LOB) apps, file shares, and printers. An Azure AD-joined device has no knowledge of 
+the on-premises AD environment (because it's not joined to that environment). However, you can use Azure AD Connect
+to provide these devices with additional information about your on-premises AD.
+
+If you have a hybrid environment with both Azure AD and on-premises AD, you may already have Azure AD Connect or 
+Azure AD Connect Cloud Sync deployed to synchronize on-premises identity information to the cloud. As part of the 
+sync process, on-premises user and domain information is synced to Azure AD. 
+
+When a user sign into an Azure AD joined device in a hybrid environment:
+1. Azure AD sends the user's on-premises domain details back to the device along with the primary refresh token.
+2. The Local Security Authority (LSA) service enables Kerberos and NTLM authentication on your device.
+
+When an attempt is made to access a resource requiring Kerberos or NTLM in the user's on-premises environment, 
+the device:
+1. Sends the on-premises domain information and the user's credentials to the found DC to authenticate the user.
+2. Receive a Kerberos ticket granting ticket (TGT) or NTLM token based on the protocol that you’re on-premises 
+resource or application supports. If an attempt to obtain a Kerberos TGT or NTLM token for the domain fails 
+(related DC Locator timeouts may be the cause of the delay), a credential manager entry is attempted or the user 
+requests credentials for the target resource. You may receive an authentication popup to
+
+Any app configured for Windows Integrated Authentication will seamlessly enforce SSO when a user attempts to access it.
+
+What you need to know
+Additional configuration is required when using password less authentication to Azure AD joined devices.
+ If you have multiple domains, you may need to adjust the domain-based filtering in Azure AD Connect to 
+   ensure data is synchronized for the required domains.
+ Apps and resources that rely on Active Directory computer authentication will not work because there is no 
+   computer object in AD on Azure AD joined devices.
+ Files cannot be shared with other users on Azure AD joined devices.
+ Applications running on devices with Azure AD Join can authenticate users. You must use an implicit UPN or 
+   NT4 type syntax using her FQDN name of the domain as the domain part. For example, user@contoso.corp.com, or 
+   contoso.corp.com\user.
+
+What is Azure Active Directory Seamless Single Sign-On?
+Azure Active Directory Seamless Single Sign-On (Azure AD Seamless SSO) automatically signs users in when using 
+corporate devices that connect to the corporate network. With this feature enabled, users no longer need to enter 
+a password to sign in to Azure AD. Also, you usually don't need to enter a username. This feature makes it easier 
+for users to access cloud-based applications without requiring additional on-premises components.
+
+Seamless SSO can be combined with either password hash synchronization or pass-through authentication as a sign-in 
+method. Seamless SSO is not applicable to Active Directory Federation Services (ADFS).
+
+SSO via Primary Refresh Token and Seamless SSO
+For Windows 10, Windows Server 2016, and later versions, we recommend using SSO via Primary Refresh Token (PRT). For Windows 7 and Windows 8.1, we recommend using Seamless SSO. Seamless SSO requires the user's device to be domain-joined, which is not used for Windows 10 Azure AD joined devices or Hybrid Azure AD joined devices. SSO with Azure AD joined, Hybrid Azure AD joined, and Azure AD registered devices works based on the primary refresh token (PRT).
+
+SSO via PRT works for Hybrid Azure AD joined, Azure AD joined, or personally registered devices only if the device is registered to Azure AD using Add work or school account. after for more information on how SSO works on Windows 10 with PRT, see Primary Refresh Token (PRT) and Azure AD.
+
+Main advantage
+Great user experience
+    Users are automatically signed into both on-premises and cloud-based applications.
+    Users do not have to enter passwords repeatedly.
+Easy to deploy and manage
+    On-premises, no additional components are required for this feature to work.
+    Either cloud authentication method, password hash synchronization, or pass-through authentication, will work.
+    You can use Group Policy to deploy to some or all users.
+    Non-Windows 10 devices can be registered with Azure AD without using AD FS infrastructure. This feature 
+      requires the use of the workplace-join client version 2.1 or later.
+
