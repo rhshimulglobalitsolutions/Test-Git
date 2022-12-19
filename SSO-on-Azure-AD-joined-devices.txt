@@ -50,9 +50,15 @@ Seamless SSO can be combined with either password hash synchronization or pass-t
 method. Seamless SSO is not applicable to Active Directory Federation Services (ADFS).
 
 SSO via Primary Refresh Token and Seamless SSO
-For Windows 10, Windows Server 2016, and later versions, we recommend using SSO via Primary Refresh Token (PRT). For Windows 7 and Windows 8.1, we recommend using Seamless SSO. Seamless SSO requires the user's device to be domain-joined, which is not used for Windows 10 Azure AD joined devices or Hybrid Azure AD joined devices. SSO with Azure AD joined, Hybrid Azure AD joined, and Azure AD registered devices works based on the primary refresh token (PRT).
+For Windows 10, Windows Server 2016, and later versions, we recommend using SSO via Primary Refresh Token (PRT). 
+For Windows 7 and Windows 8.1, we recommend using Seamless SSO. Seamless SSO requires the user's device to be 
+domain-joined, which is not used for Windows 10 Azure AD joined devices or Hybrid Azure AD joined devices. SSO 
+with Azure AD joined, Hybrid Azure AD joined, and Azure AD registered devices works based on the primary refresh 
+token (PRT).
 
-SSO via PRT works for Hybrid Azure AD joined, Azure AD joined, or personally registered devices only if the device is registered to Azure AD using Add work or school account. after for more information on how SSO works on Windows 10 with PRT, see Primary Refresh Token (PRT) and Azure AD.
+SSO via PRT works for Hybrid Azure AD joined, Azure AD joined, or personally registered devices only if the device
+is registered to Azure AD using Add work or school account. after for more information on how SSO works on Windows
+10 with PRT, see Primary Refresh Token (PRT) and Azure AD.
 
 Main advantage
 Great user experience
