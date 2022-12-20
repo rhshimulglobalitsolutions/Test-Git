@@ -1,0 +1,38 @@
+Sources of monitoring data for Azure Monitor:
+Azure Monitor is based on a common monitoring data platform that includes,
+ Metrics
+ Logs
+ Traces
+ Changes
+
+This platform allows data from multiple resources to be analyzed together using a common set of tools in Azure 
+Monitor. Monitoring data may also be sent to other locations to support certain scenarios, and some resources may 
+write to other locations before they can be collected into Logs or Metrics.
+It describes common sources of monitoring data collected by Azure Monitor in addition to the monitoring data 
+created by Azure resources. Links are provided to detailed information on configuration required to collect this 
+data to different locations.Some of these data sources use the new data ingestion pipeline in Azure Monitor.
+
+There are multiple sources of monitoring data are available. Some of them are given below:
+
+ Application tiers: Sources of monitoring data from Azure applications can be organized into tiers, the highest 
+   tiers being your application itself and the lower tiers being components of Azure platform.
+
+ Azure tenant: Telemetry related to your Azure tenant is collected from tenant-wide services such as Azure AD.
+
+ Azure subscription: Telemetry related to the health and operation of your Azure subscription.
+
+ Azure resources: Metrics and resource logs provide information about the internal operation of Azure resources.
+   These are available for most Azure services, and monitoring solutions and insights collect additional data for 
+   services.
+
+ Operating system (guest): Compute resources in Azure, in other clouds, and on-premises have a guest operating 
+   system to monitor. With the installation of an agent, you can gather telemetry from the guest into Azure 
+   Monitor to analyze it with the same monitoring tools as the Azure services themselves.
+
+ Application Code: Detailed application monitoring in Azure Monitor is done with Application Insights, which 
+   collects data from applications running on various platforms. The application can be running in Azure, another 
+   cloud, or on-premises.
+
+ Custom sources: In addition to the standard tiers of an application, you may need to monitor other resources 
+   that have telemetry that can't be collected with the other data sources. For these resources, write this data 
+   to either Metrics or Logs using an Azure Monitor API.
