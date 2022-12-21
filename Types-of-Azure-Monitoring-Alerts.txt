@@ -1,3 +1,25 @@
+Azure Monitor Alerts
+Alerts help you detect and address issues before users notice them by proactively notifying you when Azure Monitor 
+data indicates that there may be a problem with your infrastructure or application. You can alert on any metric 
+or log data source in the Azure Monitor data platform.
+
+An alert rule monitors your telemetry and captures a signal that indicates that something is happening on the 
+specified resource. The alert rule captures the signal and checks to see if the signal meets the criteria of the 
+condition. If the conditions are met, an alert is triggered, which initiates the associated action group and 
+updates the state of the alert.
+
+An alert rule combined with 
+1. The resources to be monitored and 
+2. The signal or telemetry from the resource Conditions
+
+If you're monitoring more than one resource, the condition is evaluated separately for each of the resources and 
+alerts are fired for each resource separately.Once an alert is triggered, the alert is made up of then those 
+are performing:
+1. Alert processing rules 
+2. Alert conditions
+3. Action groups
+4. The user response
+
 Mainly There are four types of Azure Monitor Alerts.
 1. Metric alerts	
 2. Log alerts 
