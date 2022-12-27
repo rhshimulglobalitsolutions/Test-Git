@@ -1,0 +1,360 @@
+Azure security:
+Security is a top priority in the cloud, and we know how important it is to have accurate and timely information 
+about Azure security. One of the biggest reasons to use Azure for your applications and services is to take 
+advantage of a wide variety of security tools and features. These tools and capabilities enable you to create 
+secure solutions on the Azure platform. Microsoft Azure provides confidentiality, integrity, and availability of 
+customer data while enabling transparent accountability.
+
+  The focus here is on customer-facing controls that allow customization of applications and services to 
+　　enhance security.
+  For information on how Microsoft secures the Azure platform itself, see Azure Infrastructure Security.
+
+Azure security features:
+Responsibilities for those managing security for applications and services vary by cloud service model. There are 
+capabilities available in the Azure platform that cover these areas of responsibility, with built-in functionality 
+and partner solutions deployable into your Azure subscription.
+Built-in features are grouped into six feature categories: 
+1. Operations, 2. Applications, 3. Storage, 4. Networking, 5. Compute, 6. Identity
+
+1.  Operation
+This section provides additional information about features that are important to security operations and overview 
+information about these features.
+
+Microsoft Sentinel: Microsoft Sentinel is a scalable, cloud-native Security Information and Event Management (SIEM)
+and Security Orchestration Automated Response (SOAR) solution. Microsoft Sentinel delivers advanced security 
+analytics and threat intelligence across the enterprise, providing a single solution for attack detection, threat 
+visibility, proactive hunting, and threat response.
+
+Microsoft Defender for Cloud: Microsoft Defender for Cloud helps you prevent, detect and respond to threats with 
+visibility and control over the security of your Azure resources. It provides integrated security monitoring and 
+policy management across your Azure subscriptions, detects threats that might otherwise go unnoticed, and works 
+with a broad ecosystem of security solutions. Also, can help with security operations by providing a single 
+dashboard with alerts and recommendations for immediate action. 
+
+Azure Resource Manager: Azure Resource Manager allows you to work with multiple resources in your solution as a 
+group. All these resources in your solution can be deployed, updated, or deleted in one coordinated operation. Use 
+an Azure Resource Manager template for deployment. This template can be used for different environments such as 
+testing, staging, and production. Resource Manager provides security, auditing, and tagging features to help you 
+manage your resources after deployment. It improves the security of solutions deployed in Azure. This reduces the 
+risk of security configuration errors that can occur during manual deployment.
+
+Application Insights: Application Insights is an extensible application performance management (APM) service for 
+web developers. You can monitor live web applications and automatically detect performance issues with Application
+Insights. Application Insights includes powerful analytics tools that help you diagnose problems and understand 
+what your users are doing with your app. Constantly monitor your running applications, both during testing and 
+after publishing or deploying.
+
+Azure Monitor: Azure Monitor visualizes, queries, routes, alerts, auto scales, and automates data from both Azure 
+subscriptions (activity logs) and individual Azure resources (resource logs). You can use Azure Monitor to create 
+notifications for security-related events generated in Azure logs.
+Azure Monitor logs: Azure Monitor Logs – An IT management solution that works 
+not only for Azure resources, but also for on-premises and third-party cloud infrastructures such as AWS. 
+You can route Azure Monitor data directly to Azure Monitor Logs, so you can see metrics and logs across your 
+environment in one place.
+
+Azure Advisor: Azure Advisor is a personalized cloud consultant that helps you optimize your Azure deployments. 
+Azure Advisor analyzes resource configuration and usage telemetry. It then looks for opportunities to reduce 
+overall Azure usage while proposing solutions that help improve performance, security, and resource reliability. 
+Also makes recommendations to improve the overall security. 
+
+2.  Application
+This section provides additional information about important features of Application Security and overview 
+information about these features.
+
+Penetration test: We do not perform penetration testing of your applications on your behalf, but we understand that
+you may feel the need to perform testing on your own applications. This is a good thing because when you harden 
+your applications, you can make the entire Azure ecosystem more secure. Although customers must still follow the 
+Microsoft Cloud Penetration Testing Conduct Rules.
+
+Web application firewall: Web Application Firewall (WAF) helps protect your web applications from common web-based 
+attacks such as SQL injection, cross-site scripting attacks, and session hijacking. This firewall comes
+preconfigured with protection from threats identified as the top 10 most common vulnerabilities by the Open Web 
+Application Security Project (OWASP).
+
+Authentication and authorization in Azure App Service: App Service Authentication and Authorization is a feature 
+that provides a way for applications to sign in users without requiring code changes on the backend of the app. 
+This makes it easier to secure your application and allows for per-user data.
+
+Multi-tiered security architecture: Developers can layer their security architecture and provide different levels 
+of network access for different tiers of applications. In general, it is considered desirable to hide the API 
+backend from normal internet access and only allow his web app upstream to call the API. You can restrict public 
+access to your API applications by using Network Security Groups (NSGs) for the Azure Virtual Network subnet that 
+contains your App Service Environment.
+
+Web server diagnostics and application diagnostics: App Service Web Apps can diagnose log information for both web 
+servers and web applications. These are logically divided into web server diagnostics and application diagnostics. 
+Web servers have made two major advances in diagnosing and troubleshooting sites and applications.
+
+3.  Storage
+This section provides additional information about important Azure Storage security features and overview 
+information about these features.
+
+Azure role-based access control (Azure RBAC): You can secure your storage account with Azure role-based access 
+control (Azure RBAC). Restricting access based on the need-to-know and least-privilege security principles is 
+essential for organizations that enforce security policies on data access. You can assign permissions to users 
+using Azure built-in roles (such as Storage Account Contributor). Access to storage keys for storage accounts 
+using the Azure Resource Manager model can be controlled with Azur RBAC.
+
+Shared access signature: A shared access signature (SAS) enables delegated access to resources within a storage 
+account. SAS allows you to grant clients limited permissions to objects in your storage account for a specified 
+duration and permission set. You don't need to share your account access key when granting this limited permission.
+
+Encryption in transit: Encryption in transit is a mechanism for protecting data as it is transferred across 
+networks. Azure Storage allows you to secure your data using:
+  Transport-level encryption, such as HTTPS when transferring data in and out of Azure Storage.
+  Wire encryption (such as SMB 3.0 encryption for Azure file shares).
+  Client-side encryption (encrypts data before transferring it to storage and decrypts data after transferring 
+    data from storage).
+
+Encryption at rest: For many organizations, encryption of data at rest is critical to ensuring data privacy, 
+compliance, and data sovereignty. Azure Storage has three features that provide encryption of data “at rest”.
+  Storage Service Encryption allows you to request that storage services automatically encrypt data when it 
+    writes to Azure Storage.
+  Client-side encryption also provides encryption at rest.
+  With Azure Disk Encryption for Linux VMs and Azure Disk Encryption for Windows VMs, you can encrypt OS and data
+    disks used by IaaS virtual machines.
+
+Storage Analytics: Azure Storage Analytics provides logged and metric data for your storage account. You can use 
+this data to trace requests, analyze usage trends, and diagnose problems with your storage account. Storage 
+Analytics logs detailed info.  about successful and failed requests to storage services. You can use this 
+information to monitor individual requests and diagnose problems with your storage services. 
+The following types of authenticated requests are logged:
+  successful request
+  Failed requests (various errors related to timeouts, bandwidth throttling, network, authorization, etc.)
+  Requests with Shared Access Signatures (SAS), including failed and successful requests
+  Data analysis request
+
+Enabling browser-based clients with CORS: Cross-Origin Resource Sharing (CORS) is a mechanism that allows domains 
+to access each other's resources. User agents send additional headers to verify that JavaScript code loaded from 
+one domain can be used to access resources located on another domain. The latter domain then responds with 
+additional headers that allow or deny the original domain access to her resources.
+
+4.  Network
+This section provides additional information about important features of Azure Network Security and overview 
+information about these features.
+
+Network layer control: Network access control, the ability to restrict connections to and from specific devices or 
+subnets, is central to network security. Network access control aims to ensure that only authorized users and 
+devices can access virtual machines and services.
+
+Network security group:  A Network Security Group (NSG) is a basic stateful packet filtering firewall that controls
+access based on 5-tuples. NSG does not provide application layer inspection nor authenticated access control. You 
+can use NSGs to control traffic that travels between subnets within your Azure Virtual Network and between your 
+Azure Virtual Network and the internet.
+
+Azure Firewall: Azure Firewall is a cloud-native, intelligent network firewall security service that provides 
+threat protection for cloud workloads running in Azure. A fully stateful firewall-as-a-service with built-in high 
+availability and unlimited cloud scalability. It provides both east-west and north-south traffic inspection.
+
+Route control and forced tunneling: The ability to control routing behavior in Azure Virtual Networks is a key 
+feature of network security and access control.
+For example, if you want all traffic to and from your Azure Virtual Network to go through the virtual security 
+appliance, you need to be able to control and customize the routing behavior. This is achieved by configuring 
+user-defined routes in Azure. User-defined routes allow you to customize the incoming and outgoing paths for 
+traffic traveling between individual virtual machines or subnets, ensuring the most secure routes. Forced tunneling
+is a mechanism that prevents services from being authorized to initiate connections with devices on the Internet.
+Note that this is different from accepting incoming connections and responding to them.
+
+Virtual network security appliance: Network security groups, user-defined routes, and forced tunneling can provide 
+security at the network and transport layer levels of the OSI model but enabling security at higher levels of the 
+stack can be time consuming. there is. Take advantage of these enhanced network security capabilities with Azure 
+partner network security appliance solutions.
+
+Azure Virtual Network: An Azure Virtual Network (VNet) represents your own network in the cloud. A logically 
+isolated Azure network fabric dedicated to subscriptions. This network gives you complete control over IP address 
+blocks, DNS settings, security policies, and route tables. You can divide your VNet into subnets to place your 
+Azure IaaS virtual machines (VMs) or cloud services (PaaS role instances).
+You can also connect your virtual network to your on-premises network using one of Azure's connectivity options. 
+For example, I have the following scenario:
+  Connectivity from individual workstations to an Azure Virtual Network
+  VPN connection from on-premises network to Azure Virtual Network
+  Connectivity through a dedicated WAN link from your on-premises network to your Azure Virtual Network
+  Connectivity between Azure Virtual Networks
+
+Azure Private Link: Azure Private Link provides private access to Azure PaaS services (Azure Storage, SQL Database,
+etc.) and customer-owned/partner services hosted in Azure over private endpoints in virtual networks. Preferences 
+and consumption with Azure Private Link are consistent across Azure PaaS, customer-owned, and shared partner 
+services. Traffic from virtual networks to Azure services always remains on the Microsoft Azure backbone network.
+
+VPN Gateway: If you want to send network traffic between your Azure Virtual Network and you’re on-premises site, 
+you need to create a VPN gateway for your Azure Virtual Network. A VPN gateway is a type of virtual network gateway
+that sends encrypted traffic over public connections. A VPN gateway also allows you to send traffic between Azure 
+Virtual Networks over the Azure Network Fabric.
+
+ExpressRoute: Microsoft Azure ExpressRoute is a dedicated WAN link. It allows you to extend your on-premises 
+network to the Microsoft cloud with a dedicated private connection provided by your connectivity provider.
+ ExpressRoute connections do not traverse the public internet and are therefore considered more secure than 
+VPN-based solutions. This makes ExpressRoute connections more secure, reliable, lower latency, and faster than 
+typical connections over the Internet.
+
+Application Gateway: Microsoft Azure Application Gateway provides an Application Delivery Controller (ADC) as a 
+service, making various Layer 7 load balancing capabilities available to your applications.
+This allows you to optimize web farm productivity by offloading CPU-intensive TLS termination to Application 
+Gateway. It provides failover and performance routing of HTTP requests between different servers, whether in the 
+cloud or on-premises.Application Gateway provides many Applications Delivery Controller(ADC) features such as HTTP 
+load balancing, cookie-based session affinity,TLS offloading,custom health probes, multi-site support,and more. 
+
+Web application firewall: Web Application Firewall (WAF) is a feature of Azure Application Gateway that uses 
+Application Gateway against standard Application Delivery Control (ADC) functionality to protect web applications. 
+A web application firewall accomplishes this by providing protection against most of the OWASP top 10 common web 
+vulnerabilities. 
+  Protection against SQL injection
+  Protection against common web attacks (command injection, HTTP request smuggling, HTTP response splitting,
+   remote file inclusion attacks, etc.)
+  Protection against HTTP protocol violations
+  Protection against HTTP protocol anomalies (such as missing host user-agent and authorization headers)
+  Preventing bots, crawlers and scanners
+  Detect common application misconfigurations (Apache, IIS, etc.)
+An existing application gateway can be easily converted to an application gateway with a web application firewall.
+
+Traffic manager: Microsoft Azure Traffic Manager allows you to control the distribution of user traffic to service 
+endpoints in different data centers. Service endpoints supported by Traffic Manager include Azure VMs, web 
+applications, and cloud services. You can also use Traffic Manager with external endpoints outside of Azure. 
+Traffic Manager uses Domain Name System (DNS) to direct client requests to the best endpoint based on traffic 
+routing method and endpoint health.Traffic Manager offers different traffic routing methods for different 
+application needs, endpoint health, monitoring, and automatic failover. Traffic Manager responds to failures, 
+such as failure of an entire Azure region.
+
+Azure Load Balancer: Azure Load Balancer provides your applications with high availability and excellent network 
+performance. Azure Load Balancer is a layer 4 (TCP, UDP) load balancer that distributes incoming traffic among 
+healthy instances of services defined in a load balanced set. Azure Load Balancer can be configured as follows:
+  Load balance incoming internet traffic to virtual machines. This configuration is called public load balancing.
+  Load balance traffic between virtual machines in virtual networks, between virtual machines in cloud services,
+    and between on-premises computers and virtual machines in cross-premises virtual networks. This configuration 
+    is called internal load balancing.
+  Direct external traffic to a specific virtual machine.
+
+
+Internal DNS: You can manage the list of DNS servers used by your VNet in the management portal or in your network 
+configuration file. You can add up to 12 DNS servers per VNet. When specifying DNS servers, it is important to 
+ensure that the DNS servers are listed in the order appropriate for your environment. The DNS server list does not
+support round robin. They are used in the order you specify. If the DNS server at the top of the list is reachable,
+it will be used regardless of whether the DNS server is working properly. To change the order of the DNS servers 
+for your virtual network, remove them from the list and add them back in the desired order. DNS supports 
+availability among her three pillars of security, "CIA" (Confidentiality, Integrity, Availability).
+
+Azure DNS: Domain Name System (DNS) is responsible for translating (or resolving) the name of a website or service 
+to its IP address. Azure DNS is a DNS domain hosting service that provides name resolution using the Microsoft 
+Azure infrastructure. By hosting your domain in Azure, you can manage your DNS records using the same credentials,
+APIs, tools, and billing as your other Azure services. DNS supports availability among his three pillars of 
+security, "CIA" (Confidentiality, Integrity, Availability).
+
+Azure Monitor log NSGs: You can enable the following diagnostic log categories for NSGs:
+  Events: Contains entries about NSG rules applied to VMs and instance roles based on MAC address. The state of 
+    these rules is collected every 60 seconds.
+  Rule counters: Contains entries about the number of times each NSG rule was applied to deny or allow traffic.
+
+Microsoft Defender for Cloud: Microsoft Defender for Cloud continuously analyzes the security state of your Azure 
+resources against network security best practices. When Defender for Cloud identifies potential security 
+vulnerabilities, it makes recommendations that guide you through the process of configuring the necessary controls 
+to harden and protect your resources.
+
+5.  Compute
+This section provides additional information about important features in this area and overview information about 
+these features.
+
+Azure Confidential Computing: Azure Confidential Computing is the final missing piece in the data protection 
+puzzle. This ensures that your data is always encrypted. Whether it's being stored, being moved over a network, or 
+being loaded into memory and being used. Additionally, by enabling remote attestation, you can cryptographically 
+verify that provisioned VMs have been securely started and configured correctly before unlocking the data.
+For platform as a service, we offer multiple container-based options, including integration with Azure Kubernetes 
+Service (AKS).
+
+Antimalware and antivirus software: Azure IaaS offers anti-malware software from security vendors such as 
+Microsoft, Symantec, Trend Micro, McAfee, and Kaspersky. This helps protect your virtual machines from threats 
+such as malicious files and adware. Microsoft Antimalware for Azure Cloud Services and Azure Virtual Machines is a 
+protection that helps identify and remove viruses, spyware, and other malicious software. Microsoft Antimalware 
+provides configurable alerts when known malicious or unwanted software attempts to automatically install or run on
+your Azure systems. Microsoft Antimalware can also be deployed using Microsoft Defender for Cloud.
+
+Hardware security module: Encryption and authentication do not improve security unless the keys themselves are 
+protected. Storing valuable secrets and keys in Azure Key Vault makes it simple to manage and secure them. Key 
+Vault offers an optional hardware security module (HSM) for key storage. HSM complies with the FIPS 140-2 Level 2 
+standard. In addition to SQL Server encryption keys for backups or Transparent Data Encryption, you can store all 
+your application keys and secrets in Key Vault. Permissions and access to these protected items are managed through
+Azure Active Directory.
+
+Virtual machine backup: Azure Backup is a solution that allows you to protect your application data with zero 
+capital investment and minimal operational costs. Application errors can corrupt data, and human errors can 
+introduce bugs in your application and lead to security problems. Azure Backup protects virtual machines running 
+Windows and Linux.
+
+Azure Site Recovery: A key part of an organization's business continuity/disaster recovery (BCDR) strategy is 
+figuring out how to keep enterprise workloads and apps running during planned and unplanned outages. Azure Site 
+Recovery helps coordinate replication, failover, and recovery of workloads and apps. This ensures that your 
+workloads and apps are available from your secondary location even if your primary location goes down.
+
+SQL VM TDEs: Transparent Data Encryption (TDE) and Column Level Encryption (CLE) are SQL Server encryption 
+features. These forms of encryption require the management and storage of cryptographic keys used for encryption.
+The SQL Server Connector allows SQL Server to use keys located in Azure Key Vault.
+
+VM disk encryption: Azure Disk Encryption for Linux VMs and Azure Disk Encryption for Windows VMs help encrypt IaaS
+virtual machine disks. This feature uses the industry standard BitLocker feature in Windows and his DM-Crypt 
+feature in Linux to encrypt the OS and data disk volumes. The solution is integrated with Azure Key Vault, and disk
+ encryption keys and secrets can be controlled and managed through Key Vault subscriptions. The solution also 
+encrypts all data on virtual machine disks at rest in Azure Storage.
+
+Virtual network: Virtual machines require network connectivity. To meet that requirement, Azure requires virtual 
+machines to connect to an Azure Virtual Network. An Azure Virtual Network is a logical construct built on top of 
+the physical Azure network fabric. Each logical Azure Virtual Network is isolated from all other Azure Virtual 
+Networks. Using this isolation prevents other Microsoft Azure users from accessing network traffic within your 
+deployment.
+
+Hotfix: Patches not only provide the foundation for finding and fixing potential issues, but they also reduce the 
+number of software updates that need to be deployed internally and improve the ability to monitor compliance to 
+reduce software updates. Simplify management processes.
+
+Security policy management and reporting: Defender for Cloud is a service that helps you avoid, detect and respond 
+to threats, giving you greater visibility and control over the security of your Azure resources. It provides 
+integrated security monitoring and policy management across your Azure subscriptions, detects threats that might 
+otherwise go unnoticed, and works with a broad ecosystem of security solutions.
+
+
+6.  Identity 
+Securing systems, applications, and data starts with identity-based access control. Identity and access management 
+capabilities built into Microsoft business products and services keep your organization and personal information 
+safe from unauthorized access while keeping it available to legitimate users wherever and whenever they need it.
+
+Secure identity: Microsoft uses multiple security methods and technologies in our products and services to manage 
+identity and access.
+  Multi-factor authentication requires using multiple methods to access your on-premises environment in the 
+    cloud. A wide range of easy verification options provide strong authentication while meeting user demands with 
+    a simple sign-in process.
+  Microsoft Authenticator is an intuitive multi-factor authentication feature that works with both Microsoft 
+    Azure Active Directory and Microsoft accounts, supporting wearable and fingerprint-based authorization.
+  Password policy enforcement enhances the security of traditional passwords by enforcing length and complexity 
+    requirements, periodic changes, and locking accounts after failed authentication attempts.
+  Enable authentication via Azure Active Directory with token-based authentication.
+  Azure role-based access control (Azure RBAC) allows granting access based on roles assigned to users. This 
+    makes it easy to grant users only the access they need to perform their job duties. Azure RBAC can be 
+　　customized according to your organization's business model and risk tolerance.
+  Identity management (hybrid identity) integration allows you to create a single user identity for 
+　　authentication and authorization to all resources and maintain user access control in internal data centers 
+　　and cloud platforms.
+
+Secure apps and data: Azure AD are a comprehensive cloud solution for identity and access management. It secures 
+access to application data on-site and in the cloud and simplifies user and group management. It combines core 
+directory services, advanced identity governance, security, and access management to applications, allow developers
+to easily incorporate policy-based her identity management into their applications.
+Enhance your Azure Active Directory by adding paid features with Azure Active Directory Basic, Premium P1, and 
+Premium P2 editions.
+　Cloud App Discovery is a premium feature of Azure Active Directory that allows you to identify cloud 
+　　applications used by your organization's employees.
+　Azure Active Directory Identity Protection is a security service that uses the anomaly detection capabilities 
+　　of Azure Active Directory to provide risk detection and a unified view into potential vulnerabilities that can 
+　　affect your organization's identities.
+　Azure Active Directory Domain Services allows you to join Azure virtual machines to domains without deploying 
+　　domain controllers. A user can sign into these virtual machines using his company Active Directory credentials
+　　and seamlessly access various resources.
+　Azure Active Directory B2C is a highly available global identity management service for consumer applications 
+　　that can scale to hundreds of millions of identities and integrate across mobile and web platforms. Customers 
+　　can sign into all apps with customizable experiences using their existing social media accounts or create new 
+　　standalone credentials.
+　Azure Active Directory B2B collaboration is a secure partner integration solution that supports inter-company 
+　　relationships by giving partners selective access to company applications and data using self-managed 
+　　identities.
+　Azure Active Directory Join allows you to extend your cloud capabilities to Windows 10 devices and manage them 
+　　centrally. Simplify access to apps and resources by enabling users to connect to your company's or 
+　　organizations cloud through Azure Active Directory.
+　Azure Active Directory Application Proxy provides SSO and secure remote access to web applications hosted 
+　　on-premises.
