@@ -1,0 +1,64 @@
+Basic and enhanced security features in Microsoft Defender for Cloud:
+Defender for Cloud offers a variety of enhanced security features that help protect your organization from threats 
+and attacks.
+
+Basic security features (free) - When you open Defender for Cloud in the Azure portal for the first time or enable
+it using the API, Defender for Cloud is enabled for free on all Azure subscriptions. By default, Defender for Cloud
+provides a secure score, security policies and basic recommendations, and a network security assessment to help 
+protect your Azure resources. If you want to try the enhanced security features, enable enhanced security features.
+First 30 days are free. At the end of the 30 days, if you choose to continue using this service, we will 
+automatically start charging you for your usage.
+
+Enhanced security features (paid) - With enhanced security features enabled, 
+Defender for Cloud provides integrated security management and threat protection across your hybrid cloud 
+workloads, including
+
+  Microsoft Defender for Endpoint - Microsoft Defender for servers includes Microsoft Defender for Endpoint for 
+comprehensive endpoint detection and response (EDR). For the benefits of using Microsoft Defender for Endpoint 
+with Defender for Cloud, see Use Defender for Cloud's integrated EDR solution.
+
+  Vulnerability assessment for virtual machines, container registries, and SQL resources - Easily enable 
+vulnerability assessment solutions to detect, manage, and resolve vulnerabilities. View findings, investigate, 
+and remediate directly from within Defender for Cloud.
+
+  Multi-cloud security - You can connect your Amazon Web Services (AWS) and Google Cloud Platform (GCP) accounts 
+to protect resources and workloads on those platforms within the security features of Microsoft Defender for Cloud.
+
+  Hybrid Security - See the security of all your on-premises and cloud workloads in one unified view. Enforce 
+security policies and continuously assess the security of your hybrid cloud workloads to ensure compliance with 
+security standards. Collect, search, and analyze security data from various sources such as firewalls and other 
+partner solutions.
+
+  Threat Prevention Alerts - Use advanced behavioral analytics and the Microsoft Intelligent Security Graph to 
+respond to increasingly sophisticated cyberattacks. Built-in behavioral analytics and machine learning can identify
+attacks and zero-day attacks. Monitor networks, machines, data stores (SQL servers hosted inside and outside of 
+Azure, Azure SQL databases, Azure SQL Managed Instance, Azure Storage), and cloud services for incoming attacks 
+and post-breach activity. increase. Streamline investigations with interactive tools and contextual threat 
+intelligence.
+
+  Tracks adherence to various standards - Defender for Cloud continuously assesses your hybrid cloud environment 
+and analyzes risk factors according to Microsoft Cloud Security Benchmark controls and best practices. With 
+enhanced security features enabled, you can broadly apply other industry standards, regulatory standards, and 
+benchmarks according to your organization's needs. You can add standards and track compliance from the regulatory 
+compliance dashboard.
+
+  Access and Application Control - Block malware and other unwanted applications by applying machine learning 
+recommendations to build allow lists and blocklists tailored to specific workloads. Reduce your network attack 
+surface with just-in-time, controlled access to management ports on Azure VMs. Access and application controls 
+greatly reduce exposure to brute force and other network attacks.
+
+  Container security features - Vulnerability management and real-time threat prevention is available in 
+containerized environments. Pricing is based on the number of unique container images pushed to your connected 
+registry. Once an image is scanned once, it will not be charged again unless it is changed and pushed again.
+
+  Extensive threat protection for Azure-connected resources - Cloud-native threat protection for Azure services 
+common to all resources (Azure Resource Manager, Azure DNS, Azure Network Layer, Azure Key Vault). Defender for 
+Cloud provides unique visibility into the Azure Management and Azure DNS layers, allowing you to protect cloud 
+resources connected to these layers.
+
+  Manage Cloud Security Posture Management (CSPM) - CSPM provides users with the ability to remediate security 
+issues and review their security posture through the tools provided. This includes the following tools
+	  Security governance and regulatory compliance
+	  cloud security graph
+	  Attack path analysis
+	  Agentless scanning of machines
