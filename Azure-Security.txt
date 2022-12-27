@@ -1,4 +1,4 @@
-Azure security:
+Azure security: 
 Security is a top priority in the cloud, and we know how important it is to have accurate and timely information 
 about Azure security. One of the biggest reasons to use Azure for your applications and services is to take 
 advantage of a wide variety of security tools and features. These tools and capabilities enable you to create 
